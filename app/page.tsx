@@ -1,5 +1,6 @@
 import { neon } from "@neondatabase/serverless";
 import { Student } from "@/lib/types";
+import StudentCardList from "@/components/student-card-list";
 
 type DatabaseResult =
   | { success: true; data: Student[] }
@@ -55,13 +56,7 @@ export default async function Page() {
   return (
     <div className="p-4">
       <h1 className="text-xl font-bold mb-4">Students ({students.length})</h1>
-      <ul className="space-y-2">
-        {students.map((student) => (
-          <li key={student.id} className="p-2 border rounded">
-            {student.family_name || "No name"}
-          </li>
-        ))}
-      </ul>
+      <StudentCardList students={students} />
     </div>
   );
 }
