@@ -1,11 +1,5 @@
 import { neon } from "@neondatabase/serverless";
-
-type Student = {
-  id: string;
-  name: string;
-  family_name: string;
-  [key: string]: unknown;
-};
+import { Student } from "@/lib/types";
 
 type DatabaseResult =
   | { success: true; data: Student[] }
