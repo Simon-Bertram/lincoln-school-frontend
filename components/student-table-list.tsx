@@ -10,7 +10,11 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-export default function StudentGridList({ students }: { students: Student[] }) {
+export default function StudentTableList({
+  students,
+}: {
+  students: Student[];
+}) {
   return (
     <Table>
       <TableCaption>Lincoln School Students</TableCaption>
